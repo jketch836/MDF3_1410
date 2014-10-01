@@ -1,0 +1,49 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fullsail.jketch.ketcham_josh_lab1_broadcastreceiver_project.Fragment.FormFragment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="25dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/firstNameField"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/first_Name"/>
+
+
+        <EditText
+            android:id="@+id/lastNameField"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/last_Name"/>
+
+        <EditText
+            android:id="@+id/ageField"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/age"/>
+
+        </LinearLayout>
+
+    <Button
+        android:id="@+id/EnterButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_button"
+        android:gravity="center"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>
