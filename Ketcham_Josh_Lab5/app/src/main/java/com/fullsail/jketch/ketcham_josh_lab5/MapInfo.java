@@ -1,20 +1,20 @@
 package com.fullsail.jketch.ketcham_josh_lab5;
 
-import java.io.File;
+import java.io.Serializable;
 
 /**
  * Created by jketch on 10/9/14.
  */
-public class MapInfo {
+public class MapInfo implements Serializable {
 
     String title;
     String theSnippet;
-    File GeoData;
+    String GeoData;
     double latitude;
     double longitude;
 
 
-    public MapInfo(String Title, String shortDesc, File data, double lat, double lng) {
+    public MapInfo(String Title, String shortDesc, String data, double lat, double lng) {
 
         title = Title;
         theSnippet = shortDesc;
@@ -35,7 +35,7 @@ public class MapInfo {
         return theSnippet;
     }
 
-    public File getData() {
+    public String getData() {
 
         return GeoData;
     }

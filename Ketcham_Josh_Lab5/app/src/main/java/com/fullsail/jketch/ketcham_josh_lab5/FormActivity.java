@@ -106,8 +106,8 @@ public class FormActivity extends Activity {
         int id = item.getItemId();
         if (id == R.id.action_save) {
 
-            double geoLat = (double) b.getLong(StringData.GEO_LOC_LAT);
-            double geoLng = (double) b.getLong(StringData.GEO_LOC_LNG);
+            double geoLat = b.getDouble(StringData.GEO_LOC_LAT);
+            double geoLng = b.getDouble(StringData.GEO_LOC_LNG);
 
             if (fieldOne.getText().length() != 0 && fieldTwo.getText().length() != 0 && imageData != null) {
 
@@ -118,6 +118,7 @@ public class FormActivity extends Activity {
                     FileInputStream fis = this.openFileInput("TheGeoData.dat");
                     ObjectInputStream ois = new ObjectInputStream(fis);
                     mapArray = (ArrayList<MapInfo>) ois.readObject();
+                    ois.close();
 
                 } catch (Exception e) {
 
@@ -130,7 +131,7 @@ public class FormActivity extends Activity {
 
                 }
 
-                mapArray.add(new MapInfo(fieldOne.getText().toString(), fieldTwo.getText().toString(), imageData, geoLat, geoLng));
+                mapArray.add(new MapInfo(fieldOne.getText().toString(), fieldTwo.getText().toString(), imageData.getAbsolutePath(), geoLat, geoLng));
 
                 try {
 
@@ -144,8 +145,7 @@ public class FormActivity extends Activity {
                     e.printStackTrace();
                 }
 
-                Intent toList = new Intent(FormActivity.this, MainActivity.class);
-                startActivity(toList);
+                finish();
 
             } else {
 

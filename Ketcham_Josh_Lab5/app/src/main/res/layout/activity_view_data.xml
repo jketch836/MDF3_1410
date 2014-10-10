@@ -14,14 +14,14 @@
         android:layout_marginTop="25dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="32sp"/>
+        android:textSize="26sp"/>
 
     <TextView
         android:id="@+id/text2"
         android:layout_marginTop="25dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="32sp" />
+        android:textSize="24sp" />
 
     <ImageView
         android:id="@+id/theImage"

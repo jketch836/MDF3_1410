@@ -1,13 +1,20 @@
 package com.fullsail.jketch.ketcham_josh_lab5;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
 public class ViewDataActivity extends Activity {
+
+    String titleString;
+    String snipetString;
+    String pictureString;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,9 +23,18 @@ public class ViewDataActivity extends Activity {
 
         Bundle b = getIntent().getExtras();
 
+        titleString = b.getString(StringData.FIELD_ONE);
+        snipetString = b.getString(StringData.FIELD_TWO);
+        pictureString = b.getString(StringData.IMAGE_DATA);
+
         TextView title = (TextView) findViewById(R.id.text1);
+
+        title.setText(titleString);
+
         TextView snippet = (TextView) findViewById(R.id.text2);
-//        ((ImageView) findViewById(R.id.theImage)).setImageBitmap(Uri.);
+        snippet.setText(snipetString);
+
+        ((ImageView) findViewById(R.id.theImage)).setImageBitmap((Bitmap) BitmapFactory.decodeFile(pictureString));
 
     }
 
@@ -40,6 +56,7 @@ public class ViewDataActivity extends Activity {
 
             MapLocationFrag mapFrag = new MapLocationFrag();
             mapFrag.removeMarker();
+            finish();
 
             return true;
         }
