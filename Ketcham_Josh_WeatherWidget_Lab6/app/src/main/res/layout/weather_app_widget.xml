@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="325dp"
+    android:layout_height="75dp"
+    android:orientation="horizontal"
+    android:layout_gravity="center"
+    android:background="#000000"
+    android:id="@+id/widgetLayout">
+
+    <ImageView
+        android:id="@+id/weatherwidget_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="8dp"
+        android:contentDescription="@string/weather_icon" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+    <TextView
+        android:id="@+id/weatherConditionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/weather_conditions"
+        android:textSize="12sp"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:id="@+id/currentTempText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/current_temp"
+        android:textSize="12sp"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:id="@+id/lastUpdated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/update_time"
+        android:textSize="12sp"
+        android:textColor="#ffffff"/>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/config_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="8dp"
+        android:contentDescription="@string/weather_config"
+        android:textSize="12sp"
+        android:src="@drawable/ic_action_overflow"
+        android:textColor="#ffffff"/>
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ketcham_Josh_WeatherWidget_Lab6</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="configure">Configure</string>
+    <string name="add_widget">Add widget</string>
+    <string name="weather_detail">Weather Detail</string>
+    <string name="weather_hl">High/Low</string>
+
+    <!-- Widget Strings -->
+    <string name="weather_icon">Weather Icon</string>
+    <string name="weather_conditions">Loading Conditions…</string>
+    <string name="current_temp"> Loading Temperature…</string>
+    <string name="update_time">Updating Time…</string>
+    <string name="weather_config">Config</string>
+
+
+    <string name="title_activity_weather_preference">WeatherPreferenceActivity</string>
+    <string name="locationTitle">Location</string>
+    <string name="theme_title">Theme</string>
+
+
+    <string-array name="locations">
+        <item>Winter Park</item>
+        <item>Lansing</item>
+        <item>Moretown</item>
+    </string-array>
+
+
+    <string-array name="locationValues">
+        <item> 0 </item>
+        <item> 1 </item>
+        <item> 2 </item>
+    </string-array>
+
+    <string-array name="text_theme">
+        <item>White</item>
+        <item>Cyan</item>
+    </string-array>
+
+
+    <string-array name="themeValues">
+        <item> 0 </item>
+        <item> 1 </item>
+    </string-array>
+
+</resources>

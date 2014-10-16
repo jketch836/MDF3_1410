@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:key="theScreen">
+
+        <ListPreference
+            android:entries="@array/locations"
+            android:entryValues="@array/locationValues"
+            android:key="PREF_LOCATION"
+            android:summary="Change Location"
+            android:title="@string/locationTitle" />
+
+        <ListPreference
+            android:entries="@array/text_theme"
+            android:entryValues="@array/themeValues"
+            android:key="PREF_THEME"
+            android:summary="Change Widget Background"
+            android:title="@string/theme_title" />
+
+</PreferenceScreen>
