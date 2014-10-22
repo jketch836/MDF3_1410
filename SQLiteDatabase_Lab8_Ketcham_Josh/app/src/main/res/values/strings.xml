@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SQLiteDatabase_Lab8_Ketcham_Josh</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_form">FormActivity</string>
+    <string name="first_name"> First Name </string>
+    <string name="last_name"> Last Name </string>
+    <string name="hire_date"> Hire Date (Ex. YYYY-MM-dd HH:mm) </string>
+    <string name="hourly_pay"> Hourly Pay (5.00) </string>
+    <string name="title_activity_detail">DetailActivity</string>
+
+</resources>
