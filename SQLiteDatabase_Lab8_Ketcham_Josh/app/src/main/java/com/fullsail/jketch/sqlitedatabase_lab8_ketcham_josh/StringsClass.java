@@ -10,5 +10,6 @@ public class StringsClass {
     public static final String HIRE_DATE = "EXTRA_HIRE_DATE";
     public static final String HOUR_PAY = "EXTRA_HOUR_PAY";
     public static final String PROFILE_IMAGE = "EXTRA_PROFILE_IMAGE";
+    public static final String ROW_ID = "EXTRA_ROW_ID";
 
 }

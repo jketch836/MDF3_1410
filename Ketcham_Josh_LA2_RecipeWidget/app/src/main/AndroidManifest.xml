@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fullsail.jketch.ketcham_josh_la2_recipewidget" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MyActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DetailActivity"
+            android:exported="true"
+            android:label="DETAIL"
+            android:screenOrientation="portrait" >
+        </activity>
+
+
+        <receiver android:name=".Widget3x1.Widget31Provider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.fullsail.android.collectionwidgetdemo.UPDATE_1" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget31_info" />
+        </receiver>
+
+        <service
+            android:name=".Widget3x1.Widget31Service"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <activity
+            android:name=".Widget3x1.Widget31ConfigActivity"
+            android:label="@string/title_activity_widget31_config" >
+            <intent-filter >
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+
+            </intent-filter>
+
+        </activity>
+
+
+        <receiver android:name=".Widget3x2.Widget32Provider"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.fullsail.android.collectionwidgetdemo.UPDATE_2" />
+                <action android:name="com.fullsail.android.collectionwidgetdemo.FORWARD_ACTION_2" />
+                <action android:name="com.fullsail.android.collectionwidgetdemo.BACK_ACTION_2" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget32_info" />
+        </receiver>
+
+        <service
+            android:name=".Widget3x2.Widget32Service"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <activity
+            android:name=".Widget3x2.Widget32ConfigActivity"
+            android:label="@string/title_activity_widget32_config"
+            android:exported="true"
+            android:excludeFromRecents="true">
+
+            <intent-filter >
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+
+            </intent-filter>
+        </activity>
+
+
+    </application>
+
+</manifest>

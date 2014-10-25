@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/previousBTN32"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/favorites_list"
+            android:src="@android:drawable/ic_media_previous" />
+
+        <ImageView
+            android:id="@+id/nextBTN32"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/favorites_list"
+            android:src="@android:drawable/ic_media_next" />
+
+    </LinearLayout>
+
+    <AdapterViewFlipper
+        android:id="@+id/avfWidget32"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:flipInterval="5000" />
+
+
+    <TextView
+        android:id="@+id/empty_textView_32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Data" />
+
+</LinearLayout>

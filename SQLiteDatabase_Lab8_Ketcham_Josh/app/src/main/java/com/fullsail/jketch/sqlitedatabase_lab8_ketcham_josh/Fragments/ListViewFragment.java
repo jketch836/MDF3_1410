@@ -88,11 +88,13 @@ public class ListViewFragment extends Fragment {
 
                     Intent intent = new Intent(getActivity(), DetailActivity.class);
 
+
                     intent.putExtra(StringsClass.FIRST_NAME, employeeCursor.getString(1));
                     intent.putExtra(StringsClass.LAST_NAME, employeeCursor.getString(2));
                     intent.putExtra(StringsClass.HIRE_DATE, employeeCursor.getString(3));
                     intent.putExtra(StringsClass.HOUR_PAY, employeeCursor.getString(4));
                     intent.putExtra(StringsClass.PROFILE_IMAGE, employeeCursor.getString(5));
+                    intent.putExtra(StringsClass.ROW_ID, i);
 
                     getActivity().startActivityForResult(intent, 1);
 

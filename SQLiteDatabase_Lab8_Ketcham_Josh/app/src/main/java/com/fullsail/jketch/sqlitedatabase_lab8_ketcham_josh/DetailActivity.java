@@ -13,6 +13,7 @@ public class DetailActivity extends Activity {
 
     String imageString;
     String lastName;
+    long position;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,8 @@ public class DetailActivity extends Activity {
 
         imageString = b.getString(StringsClass.PROFILE_IMAGE);
         lastName = b.getString(StringsClass.LAST_NAME);
+
+        position = b.getInt(StringsClass.ROW_ID);
 
         ImageView iv = (ImageView) findViewById(R.id.profileImage);
         iv.setImageBitmap(BitmapFactory.decodeFile(imageString));
@@ -59,7 +62,7 @@ public class DetailActivity extends Activity {
 
             SQLDataBaseHelper db = new SQLDataBaseHelper(this);
 
-            db.removeEmployee(imageString, lastName);
+            db.removeEmployee(position);
 
             finish();
 

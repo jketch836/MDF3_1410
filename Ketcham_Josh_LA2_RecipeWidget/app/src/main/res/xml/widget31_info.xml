@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="180dp"
+    android:minHeight="40dp"
+    android:updatePeriodMillis="5000"
+    android:configure="com.fullsail.jketch.ketcham_josh_la2_recipewidget.Widget3x1.Widget31ConfigActivity"
+    android:initialLayout="@layout/widget31_layout"
+    android:widgetCategory="home_screen"
+    android:resizeMode="none">
+</appwidget-provider>

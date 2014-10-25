@@ -19,7 +19,7 @@ public class SQLDataBaseHelper extends SQLiteOpenHelper {
     public static final String EMPLOYEE_HIRE_DATE = "HireDate";
     public static final String EMPLOYEE_HOURLY_PAY = "HourlyPay";
     public static final String EMPLOYEE_IMAGE = "Image";
-
+    public static final String ROW_ID = "ROW_ID";
 
     public static final String EMPLOYEE_TABLE = "Employee";
 
@@ -67,11 +67,11 @@ public class SQLDataBaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public void removeEmployee(String eimage, String lastName) {
+    public void removeEmployee(long row) {
 
         SQLiteDatabase db = getWritableDatabase();
 
-        db.delete(EMPLOYEE_TABLE, EMPLOYEE_IMAGE + " =? " + eimage + " and " + EMPLOYEE_LAST_NAME  + " =? " + lastName, null);
+        db.delete(EMPLOYEE_TABLE, ROW_ID + "=" + row, null);
 
     }
 
